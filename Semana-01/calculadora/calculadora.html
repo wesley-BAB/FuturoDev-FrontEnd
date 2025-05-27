@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" name="resultado" id="resultado" value="DESLIGADA" onkeypress="return verificar(event)" autofocus="autofocus" disabled="disabled"></div></td>
+        </tr>
+        <tr>
+            <td><a href="#" onclick="ligar()"><img src="img/ligar.png" id="liga-desliga" /></a></td>
+            <td><button id="btnDividir" value="/" onclick="valor(this.value)">/</button></td>
+            <td><button id="btnMultiplicar" value="*" onclick="valor(this.value)">*</button></td>
+            <td><button id="btnSubtrair" value="-" onclick="valor(this.value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn7" value="7" onclick="valor(this.value)">7</button></td>
+            <td><button id="btn8" value="8" onclick="valor(this.value)">8</button></td>
+            <td><button id="btn9" value="9" onclick="valor(this.value)">9</button></td>
+            <td rowspan="2"><button id="btnMais" value="+" onclick="valor(this.value)">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn4" value="4" onclick="valor(this.value)">4</button></td>
+            <td><button id="btn5" value="5" onclick="valor(this.value)">5</button></td>
+            <td><button id="btn6" value="6" onclick="valor(this.value)">6</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn1" value="1" onclick="valor(this.value)">1</button></td>
+            <td><button id="btn2" value="2" onclick="valor(this.value)">2</button></td>
+            <td><button id="btn3" value="3" onclick="valor(this.value)">3</button></td>
+            <td rowspan="2"><button id="btnResultado" onclick="resultado()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btn0" value="0" onclick="valor(this.value)">0</button></td>
+            <td><button id="btnv" value="." onclick="valor(this.value)">,</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="4"><button id="btnLimpar" onclick="limpar()">Limpar</button></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+               <p><a href="https://github.com/wesley-BAB" target="_blank">Wesley Calculator</a></p> 
+            </td> 
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
+<script>
+    function ligar(){
+        let campo = document.getElementById("resultado");
+        let imagem = document.getElementById("liga-desliga");
+        let resultado = document.getElementById("resultado");
+        if (campo.disabled) {
+            campo.removeAttribute("disabled")
+            campo.focus()
+            imagem.src = 'img/desligar.png'
+            resultado.value = ''
+            resultado.style.color = 'black'
+        } else {
+            limpar()
+            campo.setAttribute("disabled", "true")
+            imagem.src = 'img/ligar.png'
+            resultado.value = 'DESLIGADA'
+            resultado.style.color = '#fff'
+        }
+    }
+    function valor(valor){
+        let campo = document.getElementById("resultado");
+        let valorResultado = document.getElementById('resultado').value
+        if(!campo.disabled){
+            document.getElementById('resultado').value = valorResultado + valor
+        }
+        
+    }
+    function resultado(){
+        let resultado = document.getElementById('resultado').value
+        resultado = resultado.replace("=", "")
+        resultado = resultado.replace(",", ".")
+        resultado = eval(resultado) 
+        document.getElementById("resultado").value = resultado
+    }
+    function limpar(){
+        document.getElementById('resultado').value = ''
+    }
+    function verificar(event) {
+        if (event.key === "Enter" || event.key === "=" || event.key === "Equal") { // Captura diferentes formas de "="
+            resultado()
+        }else if(event.key === "Escape"){
+            limpar()
+        }
+
+        const regex = /^[0-9,+\-*/]$/;
+        return regex.test(event.key);
+
+    }
+
+</script>

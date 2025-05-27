@@ -1,0 +1,71 @@
+
+
+body{
+            padding-top: 5%;
+        }
+        button{
+            background-color: rgb(170, 176, 176);
+            opacity: 0,5;
+            width: 60px;
+            height: 60px;
+            border: 0;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 12pt;
+            font-weight: 500;
+        }
+        img{
+            width: 50px;
+        }
+        #btnLimpar{
+            background-color: red;
+            width: 250px;
+            margin-top: 10px;
+        }
+        #btnResultado{
+            background-color: green;
+            height: 123px;
+        }
+        #btnMais{
+            height: 123px;
+        }
+        #btn0{
+            width: 123px;
+        }
+        input{
+            width: 240px;
+            height: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(127, 212, 212, 0.700);
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            font-size: 25pt;
+            font-family: 'Calculator', sans-serif;
+        }
+        input:focus{
+            width: 240px;
+            height: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(127, 212, 212, 0.700);
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+        }
+        table{
+            width: 240px;
+            margin: 0 auto;
+            background-color: black;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        td{
+            color: #fff;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }

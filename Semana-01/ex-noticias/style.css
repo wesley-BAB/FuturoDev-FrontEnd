@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Opcional para ajustar verticalmente */
+    background-color: #2F4F4F;
+    padding: 10px;
+}
+
+figure {
+    margin: 0 0 10px 0; /* Espaço abaixo do logo */
+    width: 50px;
+    height: 50px;
+}
+
+figure img{
+    width: 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    color: #fff;
+}
+
+main {
+    background-color: #F8F9FA;
+    height: 80%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+article {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos */
+    align-items: center;
+}
+
+article {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+
+section {
+    width: 50%; /* Cada seção ocupa metade da largura */
+}
+
+section:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha as imagens à esquerda */
+}
+
+section:last-child {
+    text-align: left;
+    padding-left: 20px;
+}
+
+section h3{
+    text-align: center;
+}
+
+article section img {
+    width: 100%; /* Ajusta as imagens à largura da seção */
+    margin-bottom: 10px;
+    height: 300px;
+}
+
+aside {
+    display: flex;
+    width: 90%;
+    flex-grow: 1; /* Permite que o aside ocupe todo o espaço disponível */
+    margin: 0 auto;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2F4F4F; /* Ajuste conforme necessário */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+

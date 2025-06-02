@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Celulares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Cadastro de celulares</h1>
+        <form action="#" method="#">
+            <table>
+                <tr>
+                    <td class="esquerda"><label for="Marca">Marca</label></td>
+                    <td class="direita">
+                        <select name="Marca" id="Marca">
+                            <option value="Samsung">Samsung</option>
+                            <option value="iPhone">iPhone</option>
+                            <option value="Motorola">Motorola</option>
+                            <option value="LG ">LG </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Modelo">Modelo</label></td>
+                    <td><input type="text" name="Modelo" id="Modelo" class="inputPadrao"></td>
+                </tr>
+                <tr>
+                    <td><label for="Cor">Cor</label></td>
+                    <td><input type="color" name="Cor" id="Cor"></td>
+                </tr>
+                <tr>
+                    <td><label for="Valor">Valor</label></td>
+                    <td><input type="number" name="Valor" id="Valor" class="inputPadrao"></td>
+                </tr>
+                <tr>
+                    <td><label for="Estado">Estado</label></td>
+                    <td>
+                        <input type="radio" name="Estado" id="Estado1" value="Novo">Novo
+                        <input type="radio" name="Estado" id="Estado2" value="Usado">Usado
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Obs">Observações</label></td>
+                    <td><textarea name="Obs" id="Obs"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Salvar" id="btn-salvar">
+                        <input type="button" value="Voltar" id="btn-voltar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="btnListaCelulares">
+            <a href="celulares.html">Acesse a lista de celulares</a>
+        </div>
+    </div>
+</body>
+</html>

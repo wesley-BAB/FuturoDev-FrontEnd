@@ -1,0 +1,47 @@
+<div id="nome"></div>
+<div id="cidade"></div>
+<div id="amoJS"></div>
+<div id="nomeEmail"></div>
+<script>
+    /*
+    var nomeCompleto = prompt("Digite seu nome completo");
+    var tamanhoNome = nomeCompleto.length;
+    var primeiroNome = nomeCompleto.split(" ");
+    document.getElementById('nome').innerText = `Meu primeiro nome é ${primeiroNome[0]} e meu nome inteiro contém ${tamanhoNome} caracteres`;
+
+
+    var nomeCidade = prompt("Digite o nome da sua cidade");
+    var maiuscula = nomeCidade.toUpperCase();
+    var minuscula = nomeCidade.toLowerCase();
+    document.getElementById('cidade').innerText = `${maiuscula} está Maiúscula e ${minuscula} está Minúscula`
+
+
+    var mensagem = "Em amava programar em Java";
+    var novaMensagem = mensagem.replace("Java", "JavaScript");
+    novaMensagem = novaMensagem.replace("amava", "amo");
+    document.getElementById('amoJS').innerText = `${mensagem} hoje ${novaMensagem}`
+
+    var nomeEmail = prompt("Digite o seu email");
+    var nome = nomeEmail.split("@");
+    document.getElementById('nomeEmail').innerText = `Meu nome é ${nome[0]}`
+   
+
+    const notas =  [];
+    for(var i = 1; i < 4; i++ ){
+        notas.push(parseFloat(prompt(`Digite a nota ${i}`)));
+    }
+    const notaFinal = notas.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+    var media = notaFinal/notas.length
+    
+
+    let numero = prompt("Digite um numero")
+    numero = parseFloat(numero)
+    numero = numero + 10;
+    console.log(numero)
+    */
+
+    let numero = prompt("Digite um numero decimal")
+    numero = Math.round(parseFloat(numero))
+    console.log(numero)
+
+</script>

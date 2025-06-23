@@ -1,0 +1,28 @@
+<script>
+    let regiao = prompt("Digite a região:")
+    let peso = prompt("Digite o peso do produto")
+    let valor = ''
+
+    switch (regiao) {
+        case 'Norte':
+            valor = 24 + (2.20 * parseFloat(peso));
+            break;
+        case 'Nordeste':
+            valor = 22 + (2.10 * parseFloat(peso));
+            break;
+        case 'Centro-Oeste':
+            valor = 20 + (2 * parseFloat(peso));
+            break;
+        case 'Sudeste':
+            valor = 16 + (1.80 * parseFloat(peso));
+            break;
+        case 'Sul':
+            valor = 18 + (1.90 * parseFloat(peso));
+            break;
+        default:
+        alert("Digite uma região válida")
+
+    }
+
+    alert(valor)
+</script>

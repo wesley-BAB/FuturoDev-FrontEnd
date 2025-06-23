@@ -1,0 +1,9 @@
+<script>
+    let capitalInicial = prompt('Digite o capital inicial a ser investido');
+    let mesesAplicacao = prompt('Digite a quantidade de meses de aplicação');
+    let taxa = parseFloat(0.05)
+
+    let valorFinal =  capitalInicial * Math.pow(1 + taxa, mesesAplicacao);
+    alert(valorFinal)
+
+</script>

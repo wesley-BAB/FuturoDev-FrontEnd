@@ -1,0 +1,15 @@
+<div id="resultado">
+
+</div>
+<script>
+    let ordem = parseInt(prompt("Digite a ordem da matriz identidade:"));
+
+for (let i = 0; i < ordem; i++) {
+    let linha = "";
+    for (let j = 0; j < ordem; j++) {
+        linha += (i === j) ? "1" : "0";
+    }
+   document.getElementById('resultado').innerHTML += linha + "</br>"
+}
+</script>
+
